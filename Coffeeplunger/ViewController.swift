@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Coffeeplunger
-//
-//  Created by Eddy R on 03/11/2020.
-//  Copyright © 2020 Eddy R. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -14,22 +6,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffee: UILabel!
     @IBOutlet weak var people: UILabel!
     
-    // private
+    let coffeeplunger = Coffeeplunger()
+    let powerCoffe = "weak"
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     @IBAction func power(_ sender: UIButton) {
-        print("██░░░ L\(#line) 🚧📕 tap 🚧🚧 [ \(type(of: self))  \(#function) ]")
+        if sender.tag == 0 {
+            coffeeplunger.brewCoffee(power: "weak")
+        } else if sender.tag == 1 {
+            coffeeplunger.brewCoffee(power: "normal")
+        } else {
+            coffeeplunger.brewCoffee(power: "strong")
+        }
     }
-    
     @IBAction func sliderPerson(_ sender: UISlider) {
-    
+        print("██░░░ L\(#line) 🚧📕 message 🚧🚧 [ \(type(of: self))  \(#function) ]")
         people.text = String(Int(roundf(sender.value)))
     }
     
 }
-

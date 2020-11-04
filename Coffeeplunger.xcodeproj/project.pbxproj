@@ -15,6 +15,16 @@
 		9357CDDE2551BAE200CF7DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9357CDDD2551BAE200CF7DAC /* Assets.xcassets */; };
 		9357CDE12551BAE200CF7DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9357CDDF2551BAE200CF7DAC /* LaunchScreen.storyboard */; };
 		9357CDEC2551BAE200CF7DAC /* CoffeeplungerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDEB2551BAE200CF7DAC /* CoffeeplungerTests.swift */; };
+		9357CDF72551D20B00CF7DAC /* Coffeeplunger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDF62551D20B00CF7DAC /* Coffeeplunger.swift */; };
+		9357CE012551ED9900CF7DAC /* CoffeePlungerFolders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFA2551ED9900CF7DAC /* CoffeePlungerFolders.swift */; };
+		9357CE022551ED9900CF7DAC /* CoffeePlungerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFB2551ED9900CF7DAC /* CoffeePlungerPresenter.swift */; };
+		9357CE032551ED9900CF7DAC /* CoffeePlungerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFC2551ED9900CF7DAC /* CoffeePlungerRouter.swift */; };
+		9357CE042551ED9900CF7DAC /* CoffeePlungerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFD2551ED9900CF7DAC /* CoffeePlungerModels.swift */; };
+		9357CE052551ED9900CF7DAC /* CoffeePlungerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFE2551ED9900CF7DAC /* CoffeePlungerViewController.swift */; };
+		9357CE062551ED9900CF7DAC /* CoffeePlungerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CDFF2551ED9900CF7DAC /* CoffeePlungerInteractor.swift */; };
+		9357CE072551ED9900CF7DAC /* Shema.png in Resources */ = {isa = PBXBuildFile; fileRef = 9357CE002551ED9900CF7DAC /* Shema.png */; };
+		9357CE122551FE9C00CF7DAC /* CoffeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CE112551FE9C00CF7DAC /* CoffeeData.swift */; };
+		9357CE142551FFD100CF7DAC /* CoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357CE132551FFD100CF7DAC /* CoffeeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,16 @@
 		9357CDE72551BAE200CF7DAC /* CoffeeplungerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeplungerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9357CDEB2551BAE200CF7DAC /* CoffeeplungerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeplungerTests.swift; sourceTree = "<group>"; };
 		9357CDED2551BAE200CF7DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9357CDF62551D20B00CF7DAC /* Coffeeplunger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffeeplunger.swift; sourceTree = "<group>"; };
+		9357CDFA2551ED9900CF7DAC /* CoffeePlungerFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerFolders.swift; sourceTree = "<group>"; };
+		9357CDFB2551ED9900CF7DAC /* CoffeePlungerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerPresenter.swift; sourceTree = "<group>"; };
+		9357CDFC2551ED9900CF7DAC /* CoffeePlungerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerRouter.swift; sourceTree = "<group>"; };
+		9357CDFD2551ED9900CF7DAC /* CoffeePlungerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerModels.swift; sourceTree = "<group>"; };
+		9357CDFE2551ED9900CF7DAC /* CoffeePlungerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerViewController.swift; sourceTree = "<group>"; };
+		9357CDFF2551ED9900CF7DAC /* CoffeePlungerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePlungerInteractor.swift; sourceTree = "<group>"; };
+		9357CE002551ED9900CF7DAC /* Shema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shema.png; sourceTree = "<group>"; };
+		9357CE112551FE9C00CF7DAC /* CoffeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeData.swift; sourceTree = "<group>"; };
+		9357CE132551FFD100CF7DAC /* CoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +101,12 @@
 		9357CDD02551BAE100CF7DAC /* Coffeeplunger */ = {
 			isa = PBXGroup;
 			children = (
-				9357CDD12551BAE100CF7DAC /* AppDelegate.swift */,
-				9357CDD32551BAE100CF7DAC /* SceneDelegate.swift */,
+				9357CE092551EDC300CF7DAC /* Scenes */,
+				9357CE0B2551EE4000CF7DAC /* Workers */,
+				9357CE102551FE7900CF7DAC /* Entities */,
 				9357CDD52551BAE100CF7DAC /* ViewController.swift */,
 				9357CDD72551BAE100CF7DAC /* Main.storyboard */,
-				9357CDDD2551BAE200CF7DAC /* Assets.xcassets */,
-				9357CDDF2551BAE200CF7DAC /* LaunchScreen.storyboard */,
-				9357CDE22551BAE200CF7DAC /* Info.plist */,
-				9357CDDA2551BAE100CF7DAC /* Coffeeplunger.xcdatamodeld */,
+				9357CE0E2551EEF200CF7DAC /* Others Files */,
 			);
 			path = Coffeeplunger;
 			sourceTree = "<group>";
@@ -100,6 +118,58 @@
 				9357CDED2551BAE200CF7DAC /* Info.plist */,
 			);
 			path = CoffeeplungerTests;
+			sourceTree = "<group>";
+		};
+		9357CE092551EDC300CF7DAC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9357CE0A2551EDD300CF7DAC /* CoffeePlunger */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9357CE0A2551EDD300CF7DAC /* CoffeePlunger */ = {
+			isa = PBXGroup;
+			children = (
+				9357CDFE2551ED9900CF7DAC /* CoffeePlungerViewController.swift */,
+				9357CDFF2551ED9900CF7DAC /* CoffeePlungerInteractor.swift */,
+				9357CDFB2551ED9900CF7DAC /* CoffeePlungerPresenter.swift */,
+				9357CDFA2551ED9900CF7DAC /* CoffeePlungerFolders.swift */,
+				9357CDFC2551ED9900CF7DAC /* CoffeePlungerRouter.swift */,
+				9357CDFD2551ED9900CF7DAC /* CoffeePlungerModels.swift */,
+				9357CE002551ED9900CF7DAC /* Shema.png */,
+			);
+			path = CoffeePlunger;
+			sourceTree = "<group>";
+		};
+		9357CE0B2551EE4000CF7DAC /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				9357CDF62551D20B00CF7DAC /* Coffeeplunger.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		9357CE0E2551EEF200CF7DAC /* Others Files */ = {
+			isa = PBXGroup;
+			children = (
+				9357CDD12551BAE100CF7DAC /* AppDelegate.swift */,
+				9357CDD32551BAE100CF7DAC /* SceneDelegate.swift */,
+				9357CDDD2551BAE200CF7DAC /* Assets.xcassets */,
+				9357CDDF2551BAE200CF7DAC /* LaunchScreen.storyboard */,
+				9357CDE22551BAE200CF7DAC /* Info.plist */,
+				9357CDDA2551BAE100CF7DAC /* Coffeeplunger.xcdatamodeld */,
+			);
+			name = "Others Files";
+			sourceTree = "<group>";
+		};
+		9357CE102551FE7900CF7DAC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9357CE112551FE9C00CF7DAC /* CoffeeData.swift */,
+				9357CE132551FFD100CF7DAC /* CoffeeViewModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +255,7 @@
 			files = (
 				9357CDE12551BAE200CF7DAC /* LaunchScreen.storyboard in Resources */,
 				9357CDDE2551BAE200CF7DAC /* Assets.xcassets in Resources */,
+				9357CE072551ED9900CF7DAC /* Shema.png in Resources */,
 				9357CDD92551BAE100CF7DAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,8 +276,17 @@
 			files = (
 				9357CDD62551BAE100CF7DAC /* ViewController.swift in Sources */,
 				9357CDD22551BAE100CF7DAC /* AppDelegate.swift in Sources */,
+				9357CE032551ED9900CF7DAC /* CoffeePlungerRouter.swift in Sources */,
 				9357CDD42551BAE100CF7DAC /* SceneDelegate.swift in Sources */,
+				9357CE022551ED9900CF7DAC /* CoffeePlungerPresenter.swift in Sources */,
+				9357CE122551FE9C00CF7DAC /* CoffeeData.swift in Sources */,
+				9357CE012551ED9900CF7DAC /* CoffeePlungerFolders.swift in Sources */,
+				9357CE052551ED9900CF7DAC /* CoffeePlungerViewController.swift in Sources */,
+				9357CE062551ED9900CF7DAC /* CoffeePlungerInteractor.swift in Sources */,
 				9357CDDC2551BAE100CF7DAC /* Coffeeplunger.xcdatamodeld in Sources */,
+				9357CDF72551D20B00CF7DAC /* Coffeeplunger.swift in Sources */,
+				9357CE142551FFD100CF7DAC /* CoffeeViewModel.swift in Sources */,
+				9357CE042551ED9900CF7DAC /* CoffeePlungerModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
