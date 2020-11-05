@@ -63,7 +63,7 @@ class CoffeePlungerViewController: UIViewController ,CoffeePlungerViewController
     // MARK: - Start Action with func or IBAction
     func start() {
         print("██░░░ L\(#line) 🚧🚧📐  🚧[ \(type(of: self))  \(#function) ]🚧")
-        self.interactor?.actionChangeColor()
+//        self.interactor?.actionChangeColor()
     }
     
     // MARK: - Builder when the object is unfrozen from IB
