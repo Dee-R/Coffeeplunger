@@ -19,6 +19,8 @@ protocol EngineProtocol {
     func didButtonTap(powerCoffee: String, tagIdTapped: Int?)
     func didSlide(_ obj: CoffeeRecepie)
     func didStartDefault(data: CoffeeRecepie)
+    
+    func updateViewDidButtonTap(coffee: Double)
 }
 
 struct CoffeeRecepie {
@@ -44,25 +46,30 @@ class Engine {
             baseCoffeeGramme = 30
             baseWaterMl = 200
             buttonTagSelected = tag
+            delegate?.updateViewDidButtonTap(coffee: baseCoffeeGramme * Double(baseCup))
         } else if tag == 2 {
             delegate?.didButtonTap(powerCoffee:"normal", tagIdTapped: 2)
             baseCoffeeGramme = 60
             baseWaterMl = 180
             buttonTagSelected = tag
+            delegate?.updateViewDidButtonTap(coffee: baseCoffeeGramme * Double(baseCup))
         } else if tag == 3 {
             delegate?.didButtonTap(powerCoffee:"strong", tagIdTapped: 3 )
             baseCoffeeGramme = 90
             baseWaterMl = 150
             buttonTagSelected = tag
+            delegate?.updateViewDidButtonTap(coffee: baseCoffeeGramme * Double(baseCup))
         } else {
             baseCoffeeGramme = 30
             baseWaterMl = 200
             buttonTagSelected = 1
             delegate?.didButtonTap(powerCoffee:"light", tagIdTapped: 0)
+            delegate?.updateViewDidButtonTap(coffee: baseCoffeeGramme * Double(baseCup))
         }
     }
     // Slide
     func sliderMoved(sender: Int) {
+        baseCup = sender
         let obj = CoffeeRecepie(
             cup: sender,
             water: baseWaterMl * Double(sender),

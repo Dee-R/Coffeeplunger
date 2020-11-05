@@ -31,6 +31,41 @@ class EngineTests: XCTestCase {
         sut.buttonTap(tag:4)
         XCTAssertEqual(spy.powerCoffee, "light")
     }
+        
+    // coffee
+    func test_buttonLightTapped_returnCoffee60_with2cup() {
+        sut.startDefault()
+        sut.baseCup = 2
+        sut.buttonTap(tag: 1)
+        XCTAssertEqual(spy.coffee, 60)
+    }
+    func test_buttonLightTapped_returnCoffee90_with2cup() {
+        sut.startDefault()
+        sut.baseCup = 3
+        sut.buttonTap(tag: 1)
+        XCTAssertEqual(spy.coffee, 90)
+    }
+    func test_buttonLightTapped_returnCoffee120_with2cup() {
+        sut.startDefault()
+        sut.baseCup = 2
+        sut.buttonTap(tag: 2)
+        XCTAssertEqual(spy.coffee, 120)
+    }
+    func test_buttonLightTappedTwice_returnCoffee90_with3cup() {
+        sut.startDefault()
+        sut.buttonTap(tag: 1)
+        sut.sliderMoved(sender: 3)
+        sut.buttonTap(tag: 1)
+        XCTAssertEqual(spy.coffee, 90)
+    }
+    
+    // water
+    func test_buttonLightTapped_returnCoffee60_with2cup() {
+        sut.startDefault()
+        sut.baseCup = 2
+        sut.buttonTap(tag: 1)
+        XCTAssertEqual(spy.water, 200)
+    }
     
     // MARK: - DefaultSetup
     // MARK: - Coffee Gramme
@@ -181,6 +216,10 @@ class EngineTests: XCTestCase {
         }
         func didStartDefault(data: CoffeeRecepie) {
             buttonTagSelected = data.tagSelected ?? 1
+        }
+        
+        func updateViewDidButtonTap(coffee: Double) {
+            self.coffee = coffee
         }
     }
 }
