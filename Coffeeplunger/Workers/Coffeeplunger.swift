@@ -30,7 +30,6 @@ class Coffeeplunger : CoffeeplungerProtocol{
     }
     func customQuantityCoffee(gramme: Double, power: Power) {
         let waterCoeff: Double = Double(power.rawValue) / 10000
-        
         let customLenghtUnitBaseGrammeCoffie = UnitVolume(symbol: "gC", converter: UnitConverterLinear(coefficient: waterCoeff))
         let customLenght = Measurement(value: gramme, unit: customLenghtUnitBaseGrammeCoffie)
         let waterConvertedByGrammeCoffee = customLenght.converted(to: .milliliters)

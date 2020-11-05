@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "coffee.png",
+      "filename" : "caftiereStrong.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "coffee-1.png",
+      "filename" : "caftiereStrong-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
