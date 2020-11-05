@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Coffee Plunger View Controller-->
+        <!--Coffee Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CoffeePlungerViewController" id="BYZ-38-t0r" customClass="CoffeePlungerViewController" customModule="Coffeeplunger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoffeePlungerViewController" id="BYZ-38-t0r" customClass="CoffeeMainViewController" customModule="Coffeeplunger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,25 +24,25 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rAz-Oa-B5X">
                                 <rect key="frame" x="16" y="125" width="343" height="114.5"/>
                                 <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-lY-tio" userLabel="ButtonStrong">
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-lY-tio" userLabel="ButtonStrong">
                                         <rect key="frame" x="0.0" y="0.0" width="114.5" height="114.5"/>
-                                        <state key="normal" image="caftiereStrong"/>
+                                        <state key="normal" image="caftiereLight"/>
                                         <connections>
-                                            <action selector="actionKindOfCoffeePicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SK5-Y6-Wt6"/>
+                                            <action selector="powerCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOC-Fl-clN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-eh-Dhy" userLabel="ButtonNormal">
+                                    <button opaque="NO" tag="2" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-eh-Dhy" userLabel="ButtonNormal">
                                         <rect key="frame" x="114.5" y="0.0" width="114" height="114.5"/>
                                         <state key="normal" image="caftiereNormal"/>
                                         <connections>
-                                            <action selector="actionKindOfCoffeePicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MB7-w3-lau"/>
+                                            <action selector="powerCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wR-ja-pn6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-mv-XIK" userLabel="ButtonLight">
+                                    <button opaque="NO" tag="3" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-mv-XIK" userLabel="ButtonLight">
                                         <rect key="frame" x="228.5" y="0.0" width="114.5" height="114.5"/>
                                         <state key="normal" image="caftiereLight"/>
                                         <connections>
-                                            <action selector="actionKindOfCoffeePicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFQ-kf-XrR"/>
+                                            <action selector="powerCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8W-c3-MWB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,11 +140,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kIq-yg-hhJ">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kIq-yg-hhJ">
                                         <rect key="frame" x="-2" y="36" width="347" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="sliderPeople:" destination="BYZ-38-t0r" eventType="valueChanged" id="dq0-bk-vHi"/>
+                                            <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="cvG-eU-Ytl"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -174,9 +174,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="coffeeLabel" destination="hwN-hq-rYN" id="mYa-NY-txv"/>
-                        <outlet property="numberOfPeopleLabel" destination="m8o-uq-EXN" id="8hM-Y5-H0e"/>
-                        <outlet property="waterLabel" destination="Dhc-CV-0bh" id="ALg-9q-zTD"/>
+                        <outlet property="coffeeLabel" destination="hwN-hq-rYN" id="PRk-gW-Z3K"/>
+                        <outlet property="cupLabel" destination="m8o-uq-EXN" id="oUr-c6-9fm"/>
+                        <outlet property="waterLabel" destination="Dhc-CV-0bh" id="aos-iw-2yk"/>
+                        <outletCollection property="buttonsCoffee" destination="WYj-lY-tio" collectionClass="NSMutableArray" id="4nS-nQ-IgM"/>
+                        <outletCollection property="buttonsCoffee" destination="o6a-eh-Dhy" collectionClass="NSMutableArray" id="kRh-fc-Rv8"/>
+                        <outletCollection property="buttonsCoffee" destination="vfe-mv-XIK" collectionClass="NSMutableArray" id="mVl-UC-2w5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,7 +190,6 @@
     <resources>
         <image name="caftiereLight" width="200" height="200"/>
         <image name="caftiereNormal" width="200" height="200"/>
-        <image name="caftiereStrong" width="200" height="200"/>
         <image name="coffee" width="200" height="200"/>
         <image name="logo" width="307" height="109.5"/>
         <image name="water" width="200" height="200"/>
