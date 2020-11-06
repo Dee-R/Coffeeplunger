@@ -8,16 +8,20 @@
 
 import UIKit
 
+enum KindCoffeeImage: String {
+    case light = "caftiereLight"
+    case normal = "caftiereNormal"
+    case strong = "caftiereStrong"
+}
+
 class CoffeeMainViewController: UIViewController {
 
     let engine = Engine()
     
     @IBOutlet var buttonsCoffee: [UIButton]!
-    
     @IBOutlet weak var waterLabel: UILabel!
     @IBOutlet weak var coffeeLabel: UILabel!
     @IBOutlet weak var cupLabel: UILabel!
-    
     
     var powerCoffee = ""
 //    var cup: Int = 0
@@ -29,32 +33,31 @@ class CoffeeMainViewController: UIViewController {
         self.init()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         engine.delegate = self
-        engine.startDefault()
         
+        // Set up value by default
+        engine.setUpBaseCoffeeLight(coffee: 10)
+        engine.setUpBaseCoffeeNormal(coffee: 13)
+        engine.setUpBaseCoffeeStrong(coffee: 15)
+        engine.setUpBaseWaterLight(water: 200)
+        engine.setUpBaseWaterNormal(water: 180)
+        engine.setUpBaseWaterStrong(water: 150)
+        
+        // hydrate
+        engine.startDefault()
         print("  L\(#line) [✴️\(type(of: self))  ✴️\(#function) ] ")
     }
+    
+    // MARK: - Action
     @IBAction func powerCoffee(_ sender: UIButton) {
         print("tap")
         engine.buttonTap(tag: sender.tag)
     }
     @IBAction func slider(_ sender: UISlider) {
-        
         engine.sliderMoved(sender: Int(roundf(sender.value)))
     }
-}
-
-enum KindCoffeeImage: String {
-    case light = "caftiereLight"
-    case normal = "caftiereNormal"
-    case strong = "caftiereStrong"
-    
-    case lightS = "caftiereLightS"
-    case normalS = "caftiereNormalS"
-    case strongS = "caftiereStrongS"
 }
 
 extension CoffeeMainViewController: EngineProtocol {
@@ -76,45 +79,18 @@ extension CoffeeMainViewController: EngineProtocol {
         currentButton.layer.borderWidth = 1
         currentButton.layer.borderColor = UIColor.white.cgColor
     }
-    
     func didSlide(_ obj: CoffeeRecepie) {
         cupLabel.text = String("CUP OF COFFEE : \(obj.cup)")
-        waterLabel.text = String(obj.water)
-        coffeeLabel.text = String(obj.coffee)
+        waterLabel.text = "\(obj.water) ml"
+        coffeeLabel.text = "\(obj.coffee) g"
     }
-    
     func didStartDefault(data: CoffeeRecepie) {
         buttonTagSelected = data.tagSelected ?? 1
-        coffeeLabel.text = String(data.coffee * Double(data.cup))
-//        waterLabel.text = 
+        coffeeLabel.text = "\(data.coffee * Double(data.cup)) g"
+        waterLabel.text = "\(data.water * Double(data.cup)) ml"
     }
-    
-    func updateViewDidButtonTap(coffee: Double) {
-        coffeeLabel.text = String(coffee)
+    func updateViewDidButtonTap(coffee: Double, water: Double) {
+        coffeeLabel.text = "\(coffee) g"
+        waterLabel.text = "\(water) ml"
     }
 }
-
-
-
-
-/*
- 
- var powerCoffee = ""
- var cup: Int = 0
- var water: Double = 0
- var coffee: Double = 0
- var buttonTagSelected: Int = 0
- 
- func didButtonTap(powerCoffee: String) {
- self.powerCoffee = powerCoffee
- }
- func didSlide(_ obj: CoffeeRecepie) {
- cup = obj.cup
- water = obj.water
- coffee = obj.coffee
- }
- func didStartDefault(data: CoffeeRecepie) {
- buttonTagSelected = data.tagSelected ?? 1
- }
- }
- */

@@ -60,11 +60,11 @@ class EngineTests: XCTestCase {
     }
     
     // water
-    func test_buttonLightTapped_returnCoffee60_with2cup() {
+    func test_buttonLightTapped_returnWater200_with2cup() {
         sut.startDefault()
         sut.baseCup = 2
         sut.buttonTap(tag: 1)
-        XCTAssertEqual(spy.water, 200)
+        XCTAssertEqual(spy.water, 400)
     }
     
     // MARK: - DefaultSetup
@@ -197,8 +197,15 @@ class EngineTests: XCTestCase {
         XCTAssertEqual(spy.buttonTagSelected, 2)
     }
     
+    // change Base coffe
+    func test_setUp_changeBaseCoffee() {
+        sut.setUpBaseCoffeeLight(coffee: 12)
+        XCTAssertEqual(sut.baseCoffeeGrammeDefaultLight, 12.0)
+    }
+    
     // --- expose
     class Spy: EngineProtocol {
+        
         var powerCoffee = ""
         var cup: Int = 0
         var water: Double = 0
@@ -218,8 +225,9 @@ class EngineTests: XCTestCase {
             buttonTagSelected = data.tagSelected ?? 1
         }
         
-        func updateViewDidButtonTap(coffee: Double) {
+        func updateViewDidButtonTap(coffee: Double, water: Double) {
             self.coffee = coffee
+            self.water  = water
         }
     }
 }

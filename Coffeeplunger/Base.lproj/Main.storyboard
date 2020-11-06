@@ -40,7 +40,7 @@
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-mv-XIK" userLabel="ButtonLight">
                                         <rect key="frame" x="228.5" y="0.0" width="114.5" height="114.5"/>
-                                        <state key="normal" image="caftiereLight"/>
+                                        <state key="normal" image="caftiereStrong"/>
                                         <connections>
                                             <action selector="powerCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g8W-c3-MWB"/>
                                         </connections>
@@ -190,6 +190,7 @@
     <resources>
         <image name="caftiereLight" width="200" height="200"/>
         <image name="caftiereNormal" width="200" height="200"/>
+        <image name="caftiereStrong" width="200" height="200"/>
         <image name="coffee" width="200" height="200"/>
         <image name="logo" width="307" height="109.5"/>
         <image name="water" width="200" height="200"/>
