@@ -11,7 +11,7 @@ You are free to improve this project idea.
 Just download source code and unzip the downloaded folder and open it in Xcode.
 #### Using Terminal:
 ```
-  git clone https://github.com/Dee-R/Coffeplunger.git
+  git clone https://github.com/Dee-R/Coffeeplunger.git
 ```  
 # Contact
 If you wish to contribute, your PR are welcomed. If you have any query please drop me a mail at pro.eddy.r@gmail.com
