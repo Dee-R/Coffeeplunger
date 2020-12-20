@@ -2,7 +2,7 @@
 
 ![Coffee plunger image app](https://project.getcode.fr/Coffeeplunger/Coffeeplunger.png)
 
-[![video Coffee plunger](https://project.getcode.fr/bmi/video.png)](https://project.getcode.fr/Coffeeplunger/Coffeeplunger.mp4)
+[![video Coffee plunger](https://cdn.shopify.com/s/files/1/2018/8867/files/play-button.png)](https://project.getcode.fr/Coffeeplunger/Coffeeplunger.mp4)
 
 ## Table of Contents
 * [Introduction](#introduction)
